@@ -1,5 +1,6 @@
 import {DataTypes, Model} from "sequelize"
 import sequelize from "../db/config.js"
+import Univer from "./univer.model.js"
 
 class User extends Model {}
 
@@ -24,7 +25,29 @@ User.init({
     },
     activationLink: {
         type: DataTypes.STRING
+    },
+    name: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    lastname: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    birthday: {
+        type: DataTypes.DATE
+    },
+    sex: {
+        type: DataTypes.CHAR(6),
+        allowNull: false
+    },
+    role: {
+        type: DataTypes.CHAR(6),
+        allowNull: false,
+        defaultValue: 'user'
     }
 }, {sequelize})
+
+User.Univer = User.hasOne(Univer)
 
 export default User
