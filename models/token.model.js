@@ -7,7 +7,7 @@ class Token extends Model {
 
 Token.init({
     refreshToken: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         allowNull: false
     }
 }, { sequelize })
