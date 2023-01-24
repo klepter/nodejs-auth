@@ -2,7 +2,7 @@ import dotenv from 'dotenv'
 import express from 'express'
 import cors from 'cors'
 import cookieParser from 'cookie-parser'
-import router from "./router/index.js"
+import router from "./routers/user.router.js"
 import errorMiddleware from "./middlewares/error.middleware.js"
 import sequelize from "./db/config.js"
 
