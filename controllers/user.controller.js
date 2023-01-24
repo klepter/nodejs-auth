@@ -14,12 +14,14 @@ class UserController {
                 password,
                 name,
                 lastname,
-                sex,
-                role
+                surname,
+                sex
             } = req.body
-            const birthday = (req.body.birthday) ?? null;
+            const role = (req.body.role) ?? 'user';
+            const course = (req.body.course) ?? null;
             const univer_id = (req.body.univer_id) ?? null;
-            const userData = await userService.registration(email, password, name, lastname, sex, role, birthday, univer_id)
+            const lead = (req.body.lead) ?? null;
+            const userData = await userService.registration(email, password, name, lastname, surname, sex, role, course, univer_id, lead)
             res.cookie('refreshToken', userData.refreshToken, {maxAge: 30 * 24 * 60 * 60 * 1000, httpOnly: true})
             return res.json(userData)
         } catch (e) {

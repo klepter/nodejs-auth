@@ -34,8 +34,11 @@ User.init({
         type: DataTypes.STRING,
         allowNull: false
     },
-    birthday: {
-        type: DataTypes.DATE
+    surname: {
+        type: DataTypes.STRING
+    },
+    course: {
+        type: DataTypes.INTEGER
     },
     sex: {
         type: DataTypes.CHAR(6),
@@ -43,8 +46,10 @@ User.init({
     },
     role: {
         type: DataTypes.CHAR(6),
-        allowNull: false,
         defaultValue: 'user'
+    },
+    lead: {
+        type: DataTypes.STRING
     }
 }, {sequelize})
 
