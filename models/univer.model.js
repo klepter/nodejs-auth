@@ -20,6 +20,9 @@ Univer.init({
     password: {
         type: DataTypes.STRING,
         allowNull: false
+    },
+    refreshToken: {
+        type: DataTypes.TEXT
     }
 }, {sequelize})
 

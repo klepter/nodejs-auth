@@ -41,15 +41,18 @@ User.init({
         type: DataTypes.INTEGER
     },
     sex: {
-        type: DataTypes.CHAR(6),
+        type: DataTypes.STRING,
         allowNull: false
     },
     role: {
-        type: DataTypes.CHAR(6),
+        type: DataTypes.STRING,
         defaultValue: 'user'
     },
     lead: {
         type: DataTypes.STRING
+    },
+    refreshToken: {
+        type: DataTypes.TEXT
     }
 }, {sequelize})
 

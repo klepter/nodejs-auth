@@ -2,7 +2,7 @@ import dotenv from 'dotenv'
 import express from 'express'
 import cors from 'cors'
 import cookieParser from 'cookie-parser'
-import router from "./routers/user.router.js"
+import userRouter from "./routers/user.router.js"
 import errorMiddleware from "./middlewares/error.middleware.js"
 import sequelize from "./db/config.js"
 
@@ -18,7 +18,7 @@ app.use(cors({
     credentials: true,
     origin: process.env.CLIENT_URL
 }))
-app.use('/api', router)
+app.use('/api', userRouter)
 app.use(errorMiddleware)
 
 const start = async () => {
