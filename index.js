@@ -5,6 +5,7 @@ import cookieParser from 'cookie-parser'
 import userRouter from "./routers/user.router.js"
 import errorMiddleware from "./middlewares/error.middleware.js"
 import sequelize from "./db/config.js"
+import taskRouter from "./routers/task.router.js"
 
 dotenv.config()
 
@@ -19,6 +20,7 @@ app.use(cors({
     origin: process.env.CLIENT_URL
 }))
 app.use('/api', userRouter)
+app.use('/api/task', taskRouter)
 app.use(errorMiddleware)
 
 const start = async () => {
