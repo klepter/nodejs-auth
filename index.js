@@ -25,7 +25,7 @@ app.use(errorMiddleware)
 
 const start = async () => {
     try {
-        await sequelize.sync({force: true})
+        await sequelize.sync()
             .then(() => console.log("DB connected successfully"))
         app.listen(PORT, () => console.log(`Server started on PORT = ${PORT}`))
     } catch (e) {
