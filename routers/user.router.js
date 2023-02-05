@@ -13,7 +13,7 @@ userRouter.post('/registration',
 userRouter.post('/login', userController.login)
 userRouter.post('/logout', userController.logout)
 userRouter.get('/activate/:link', userController.activate)
-userRouter.get('/refresh', userController.refresh)
+userRouter.post('/refresh', userController.refresh)
 userRouter.get('/users', authMiddleware, userController.getUsers)
 
 export default userRouter

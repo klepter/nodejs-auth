@@ -30,6 +30,6 @@ TaskModel.init({
     userId2: {
         type: DataTypes.INTEGER
     }
-}, {sequelize});
+}, {sequelize})
 
 export default TaskModel

@@ -1,6 +1,5 @@
 import {DataTypes, Model} from "sequelize"
 import sequelize from "../db/config.js"
-import Univer from "./univer.model.js"
 
 class User extends Model {}
 
@@ -53,9 +52,10 @@ User.init({
     },
     refreshToken: {
         type: DataTypes.TEXT
+    },
+    requirements: {
+        type: DataTypes.STRING
     }
 }, {sequelize})
-
-User.Univer = User.hasOne(Univer)
 
 export default User

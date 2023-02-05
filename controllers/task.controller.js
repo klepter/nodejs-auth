@@ -1,13 +1,11 @@
-import TaskModel from "../models/task.model.js"
 import taskService from "../service/task.service.js"
-import tokenService from "../service/token.service.js";
 
 class TaskController {
     async add(req, res, next) {
         try {
             const {longitude, latitude} = req.body
-            const title = (req.body.title) ?? null;
-            const description = (req.body.description) ?? null;
+            const title = (req.body.title) ?? null
+            const description = (req.body.description) ?? null
             const userId1 = req.user.id
 
             const taskData = await taskService.add(userId1, longitude, latitude, title, description)
