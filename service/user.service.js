@@ -28,7 +28,7 @@ class UserService {
     async activate(activationLink) {
         const user = await UserModel.findOne({where: {activationLink}})
         if (!user) {
-            throw ApiError.BadRequest('Неккоректная ссылка активации')
+            throw ApiError.BadRequest('Некорректная ссылка активации')
         }
         user.isActivated = true
         await user.save()
