@@ -12,7 +12,7 @@ const options = {
             version: "0.1.0",
         },
     },
-    apis: ["./routers/*.router.js"],
+    apis: ["./routers/*.router.js", "./dtos/*.dto.js"],
 };
 
 const specs = swagger(options)

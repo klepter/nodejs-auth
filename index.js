@@ -5,7 +5,6 @@ import cookieParser from 'cookie-parser'
 import userRouter from "./routers/user.router.js"
 import errorMiddleware from "./middlewares/error.middleware.js"
 import sequelize from "./db/config.js"
-import taskRouter from "./routers/task.router.js"
 import swaggerRouter from "./routers/swagger/swagger.router.js"
 
 dotenv.config()

@@ -1,3 +1,50 @@
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *       User:
+ *           type: object
+ *           required:
+ *           - email
+ *           - password
+ *           - name
+ *           - lastname
+ *           - sex
+ *           properties:
+ *               id:
+ *                   type: integer
+ *                   description: Уникальный идентификатор пользователя, генерируется автоматически
+ *               email:
+ *                   type: string
+ *                   description: Email пользователя
+ *               password:
+ *                   type: string
+ *                   description: Пароль пользователя
+ *               isActivated:
+ *                   type: boolean
+ *                   description: Флаг, показывающий подтверждение почты
+ *               name:
+ *                   type: string
+ *                   description: Имя пользователя
+ *               lastname:
+ *                   type: string
+ *                   description: Фамилия пользователя
+ *               surname:
+ *                   type: string
+ *                   description: Отчество пользователя (при наличии)
+ *               sex:
+ *                   type: string
+ *                   description: Пол пользователя
+ *           example:
+ *               id: 1
+ *               email: email@email.com
+ *               password: $2b$04$foT1uiXTiYEREL1aoJvq5OHdK0y7XnUT/2908BbmqmA1rKo.IRkOK
+ *               isActivated: false
+ *               name: Иван
+ *               lastname: Иванов
+ *               surname: Иванович
+ *               sex: муж
+ */
 class UserDto {
     email
     name
